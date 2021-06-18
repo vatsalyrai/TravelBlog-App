@@ -96,7 +96,9 @@ public class LoginActivity extends AppCompatActivity {
 
         }
         private void performLogin()
-        {    UsernameInput.setEnabled(false);
+        {
+            preferences.setLoggedIn(true);
+            UsernameInput.setEnabled(false);
         PasswordInput.setEnabled(false);
             LoginButton.setVisibility(View.INVISIBLE);
             progressBar.setVisibility(View.VISIBLE);
